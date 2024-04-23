@@ -84,7 +84,7 @@ def task2():
     img[markers == -1] = [255, 0, 0]
 
     # create JET colormap
-    markers = np.uint8(markers)
+    markers = np.uint8(markers*20)
     markers = cv.applyColorMap(markers, cv.COLORMAP_JET)
 
     cv.imshow('Original Image', img)
@@ -148,5 +148,5 @@ def task3():
 
 if __name__ == '__main__':
     #task1()
-    #task2()
-    task3()
+    task2()
+    #task3()
